@@ -1,0 +1,3 @@
+#!/bin/bash
+
+java -cp target/cs4773-hw5-1.0-SNAPSHOT.jar hw5.ElevatorSimulation $1
