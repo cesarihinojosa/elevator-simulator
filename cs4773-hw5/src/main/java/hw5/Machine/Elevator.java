@@ -10,13 +10,13 @@ public class Elevator {
     State floorOneState;
     State floorTwoState;
     State floorThreeState;
-
-    State state = floorOneState;
+    State state;
 
     public Elevator() {
         floorOneState = new FloorOneState(this);
         floorTwoState = new FloorTwoState(this);
         floorThreeState = new FloorThreeState(this);
+        setState(floorOneState);
     }
 
     public void floorOneButtonPressed() {
@@ -44,31 +44,31 @@ public class Elevator {
     }
 
     public void arrivedAtFloor(String floor) {
-        openDoor();
         ding(floor);
+        openDoor();
     }
 
-    private void openDoor() {
+    public void openDoor() {
         System.out.println("Doors are open");
     }
 
-    private void closeDoor() {
+    public void closeDoor() {
         System.out.println("Doors are closed");
     }
 
-    private void goingUp() {
+    public void goingUp() {
         System.out.println("Going up...");
     }
 
-    private void goingDown() {
+    public void goingDown() {
         System.out.println("Going down...");
     }
 
-    private void ding(String floor) {
+    public void ding(String floor) {
         System.out.println("*ding* The elevator arrives at Floor " + floor);
     }
 
-    private void pressed(String button) {
+    public void pressed(String button) {
         System.out.println(button + " pressed");
     }
 

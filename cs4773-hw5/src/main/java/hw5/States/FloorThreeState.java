@@ -24,6 +24,9 @@ public class FloorThreeState implements State {
     }
 
     public void floorThreeButtonPressed() {
+        elevator.pressed("3");
+        elevator.closeDoor();
+        System.out.println("Nothing happens");
     }
 
 }

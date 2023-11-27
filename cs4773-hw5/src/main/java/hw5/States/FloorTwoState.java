@@ -17,6 +17,9 @@ public class FloorTwoState implements State {
     }
 
     public void floorTwoButtonPressed() {
+        elevator.pressed("2");
+        elevator.closeDoor();
+        System.out.println("Nothing happens");
     }
 
     public void floorThreeButtonPressed() {
