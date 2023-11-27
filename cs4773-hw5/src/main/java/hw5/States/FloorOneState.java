@@ -1,6 +1,6 @@
-package hw5.States;
+package hw5.states;
 
-import hw5.Machine.Elevator;
+import hw5.machine.Elevator;
 
 public class FloorOneState implements State {
 

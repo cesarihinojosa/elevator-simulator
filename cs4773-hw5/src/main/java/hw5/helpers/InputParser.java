@@ -1,11 +1,11 @@
-package hw5;
+package hw5.helpers;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class InputHandler {
+public class InputParser {
 
     public static ArrayList<Integer> parseFile(String filePath) {
         try {

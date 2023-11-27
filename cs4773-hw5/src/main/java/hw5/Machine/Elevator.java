@@ -1,9 +1,9 @@
-package hw5.Machine;
+package hw5.machine;
 
-import hw5.States.FloorOneState;
-import hw5.States.FloorThreeState;
-import hw5.States.FloorTwoState;
-import hw5.States.State;
+import hw5.states.FloorOneState;
+import hw5.states.FloorThreeState;
+import hw5.states.FloorTwoState;
+import hw5.states.State;
 
 public class Elevator {
 

@@ -1,4 +1,4 @@
-package hw5.States;
+package hw5.states;
 
 public interface State {
 
