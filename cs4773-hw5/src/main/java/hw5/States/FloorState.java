@@ -1,6 +1,6 @@
 package hw5.states;
 
-public interface State {
+public interface FloorState {
 
     public void floorOneButtonPressed();
 

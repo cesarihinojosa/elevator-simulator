@@ -17,7 +17,6 @@ Doors are open
 Doors are closed
 Nothing happens
 1 pressed
-Doors are closed
 Going down...
 *ding* The elevator arrives at Floor 1
 Doors are open

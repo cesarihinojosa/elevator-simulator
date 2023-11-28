@@ -1,22 +1,32 @@
 package hw5.machine;
 
+import hw5.states.DoorClosedState;
+import hw5.states.DoorOpenState;
+import hw5.states.DoorState;
 import hw5.states.FloorOneState;
 import hw5.states.FloorThreeState;
 import hw5.states.FloorTwoState;
-import hw5.states.State;
+import hw5.states.FloorState;
 
 public class Elevator {
 
-    State floorOneState;
-    State floorTwoState;
-    State floorThreeState;
-    State state;
+    FloorState floorOneState;
+    FloorState floorTwoState;
+    FloorState floorThreeState;
+    FloorState state;
+
+    DoorState open;
+    DoorState closed;
+    DoorState door;
 
     public Elevator() {
         floorOneState = new FloorOneState(this);
         floorTwoState = new FloorTwoState(this);
         floorThreeState = new FloorThreeState(this);
+        open = new DoorOpenState();
+        closed = new DoorClosedState();
         setState(floorOneState);
+        setDoor(open);
     }
 
     public void floorOneButtonPressed() {
@@ -49,11 +59,13 @@ public class Elevator {
     }
 
     public void openDoor() {
-        System.out.println("Doors are open");
+        door.openDoor();
+        setDoor(open);
     }
 
     public void closeDoor() {
-        System.out.println("Doors are closed");
+        door.closeDoor();
+        setDoor(closed);
     }
 
     public void goingUp() {
@@ -72,24 +84,32 @@ public class Elevator {
         System.out.println(button + " pressed");
     }
 
-    public State getState() {
+    public FloorState getState() {
         return state;
     }
 
-    public void setState(State state) {
+    public void setState(FloorState state) {
         this.state = state;
     }
 
-    public State getFloorOneState() {
+    public FloorState getFloorOneState() {
         return floorOneState;
     }
 
-    public State getFloorTwoState() {
+    public FloorState getFloorTwoState() {
         return floorTwoState;
     }
 
-    public State getFloorThreeState() {
+    public FloorState getFloorThreeState() {
         return floorThreeState;
+    }
+
+    public DoorState getDoor() {
+        return door;
+    }
+
+    public void setDoor(DoorState door) {
+        this.door = door;
     }
 
 }

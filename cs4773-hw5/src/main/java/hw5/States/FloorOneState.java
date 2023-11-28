@@ -2,7 +2,7 @@ package hw5.states;
 
 import hw5.machine.Elevator;
 
-public class FloorOneState implements State {
+public class FloorOneState implements FloorState {
 
     Elevator elevator;
 
