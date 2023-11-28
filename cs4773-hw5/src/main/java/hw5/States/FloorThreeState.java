@@ -13,7 +13,7 @@ public class FloorThreeState implements FloorState {
     public void floorOneButtonPressed() {
         elevator.goingDownToFloor("1");
         elevator.setState(elevator.getFloorTwoState());
-        elevator.setState(elevator.getFloorThreeState());
+        elevator.setState(elevator.getFloorOneState());
         elevator.arrivedAtFloor("1");
     }
 
